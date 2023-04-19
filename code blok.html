@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{} - code block</title>
+</head>
+
+<body>
+    <h2>Variable lookup</h2>
+    <script>
+        const globalVarible = 5;
+        function add(num1, num2) {
+            const globalVarible = 10;
+            const result = num1 + num2 + globalVarible;
+            function multiply() {
+                const globalVarible = 15;
+                const multiplyResult = result * globalVarible;
+                console.log(multiplyResult);
+            }
+            multiply();
+            return result;
+        }
+        console.log(add(5, 5));
+    </script>
+</body>
+
+</html>
